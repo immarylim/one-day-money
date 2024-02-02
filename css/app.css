@@ -1,0 +1,196 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #343434;
+}
+
+html, body {
+  height: 100%;
+}
+
+#container {
+  margin-bottom: 50px;
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.am--totalWrap, .am--goalBox {
+  display: none;
+}
+
+.am--goalForm {
+  display: flex;
+}
+.am--goalForm .am--goalInp {
+  margin-right: 13px;
+  padding: 5px;
+  font-size: 1.5rem;
+  border-bottom: 1.5px solid #ababab;
+}
+.am--goalForm .am--goalInp:focus {
+  outline: none;
+}
+.am--goalForm .am--goalInp::placeholder {
+  color: #e8e8e8;
+}
+.am--goalForm .am--goalBtn {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #2dc653;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.am--goalForm .am--goalBtn:hover {
+  color: #208b3a;
+}
+
+.am--goalBox {
+  align-items: center;
+}
+.am--goalBox .am--goalTxt {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.am--goalBox .am--goalInit {
+  margin: 16px 0 0 30px;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  border-radius: 0.3rem;
+  color: white;
+  background-color: #2dc653;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.am--goalBox .am--goalInit:hover {
+  background-color: #208b3a;
+}
+
+.am--totalWrap {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1.5px solid #e8e8e8;
+}
+.am--totalWrap .am--totalBox span:nth-of-type(1) {
+  font-weight: 500;
+}
+.am--totalWrap .am--totalBox .am--totalNum {
+  margin-left: 10px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #2dc653;
+}
+.am--totalWrap .am--totalNote {
+  margin-top: 15px;
+}
+.am--totalWrap .am--totalNote .am--totalExp {
+  font-size: 0.7rem;
+}
+.am--totalWrap .am--totalNote form {
+  margin-top: 5px;
+}
+.am--totalWrap .am--totalNote form input {
+  padding: 5px 10px;
+  border: 1px solid #ababab;
+  border-radius: 3px;
+  background-color: #e8e8e8;
+}
+.am--totalWrap .am--totalNote form input:focus {
+  outline: none;
+}
+.am--totalWrap .am--totalNote form input::placeholder {
+  color: #ababab;
+}
+.am--totalWrap .am--totalNote form .am--nameInp {
+  margin-right: 3px;
+}
+.am--totalWrap .am--totalNote form .am--numInp {
+  margin-right: 10px;
+}
+.am--totalWrap .am--totalNote form .am--addBtn {
+  padding: 5px 8px;
+  font-weight: 500;
+  color: #2dc653;
+  border: 1px solid #2dc653;
+  border-radius: 3px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.am--totalWrap .am--totalNote form .am--addBtn:hover {
+  color: white;
+  background-color: #2dc653;
+}
+.am--totalWrap .am--totalNote .am--totalListBox {
+  margin-top: 15px;
+}
+.am--totalWrap .am--totalNote .am--totalListBox .am--totalList {
+  position: relative;
+  padding: 15px 10px 15px 10px;
+  border-bottom: 1px solid #e8e8e8;
+  transition: all 100ms ease-in-out;
+}
+.am--totalWrap .am--totalNote .am--totalListBox .am--totalList:hover {
+  background-color: #f3f3f3;
+}
+.am--totalWrap .am--totalNote .am--totalListBox .am--totalList span:nth-of-type(1) {
+  margin-right: 15px;
+  color: #ababab;
+}
+.am--totalWrap .am--totalNote .am--totalListBox .am--totalList span:nth-of-type(2) {
+  font-weight: 500;
+}
+.am--totalWrap .am--totalNote .am--totalListBox .am--totalList .am--totalDelBtn {
+  position: absolute;
+  right: 10px;
+  padding: 2px 4.5px;
+  color: #ff5279;
+  border: 1px solid #ff5279;
+  border-radius: 50%;
+  background-color: #f8d7da;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.am--totalWrap .am--totalNote .am--totalListBox .am--totalList .am--totalDelBtn:after {
+  content: "×";
+  display: inline-block;
+  font-size: 14px;
+}
+.am--totalWrap .am--totalNote .am--totalListBox .am--totalList .am--totalDelBtn:hover {
+  color: white;
+  background-color: #ff5279;
+}
+
+@media (max-width: 500px) {
+  #container {
+    padding: 50px 10px 0 10px;
+  }
+  #container .am--goalForm .am--goalInp, #container .am--goalForm .am--goalBtn {
+    font-size: 1rem;
+  }
+  #container .am--totalBox {
+    padding: 0 10px;
+  }
+  #container .am--totalNote {
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+  #container .am--totalNote form {
+    position: relative;
+  }
+  #container .am--totalNote form .am--nameInp {
+    margin: 0 0 5px 0;
+  }
+  #container .am--totalNote form .am--nameInp, #container .am--totalNote form .am--numInp {
+    width: 70%;
+  }
+  #container .am--totalNote form .am--addBtn {
+    position: absolute;
+    right: 0;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

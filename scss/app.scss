@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
+
+$giant-font : 1.5rem;
+$btn-font : 0.7rem;
+$main-green : #2dc653;
+$font-black : #343434;
+$dark-gray : #ababab;
+$light-gray : #e8e8e8;
+
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: $font-black;
+}
+
+html, body {
+    height: 100%;
+}
+
+#container {
+    margin-bottom: 50px;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.am--totalWrap, .am--goalBox {
+    display: none;
+}
+
+.am--goalForm {
+    display: flex;
+
+    .am--goalInp {
+        margin-right: 13px;
+        padding: 5px;
+        font-size: $giant-font;
+        border-bottom: 1.5px solid $dark-gray;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $light-gray;
+        }
+    }
+
+    .am--goalBtn {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: $main-green;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+            color: #208b3a;
+        }
+    }
+}
+
+.am--goalBox {
+    align-items: center;
+
+    .am--goalTxt {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    .am--goalInit {
+        margin: 16px 0 0 30px;
+        padding: 4px 8px;
+        font-size: $btn-font;
+        border-radius: 0.3rem;
+        color: white;
+        background-color: $main-green;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+            background-color: #208b3a;
+        }
+    }
+}
+
+.am--totalWrap {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1.5px solid $light-gray;
+
+    .am--totalBox {
+        span:nth-of-type(1) {
+            font-weight: 500;
+        }
+
+        .am--totalNum {
+            margin-left: 10px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: $main-green;
+        }
+    }
+
+    .am--totalNote {
+        margin-top: 15px;
+
+        .am--totalExp {
+            font-size: $btn-font;
+        }
+
+        form {
+            margin-top: 5px;
+
+            input {
+                padding: 5px 10px;
+                border: 1px solid $dark-gray;
+                border-radius: 3px;
+                background-color: $light-gray;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &::placeholder {
+                    color: $dark-gray;
+                }
+            }
+
+            .am--nameInp {
+                margin-right: 3px;
+            }
+
+            .am--numInp {
+                margin-right: 10px;
+            }
+
+            .am--addBtn {
+                padding: 5px 8px;
+                font-weight: 500;
+                color: $main-green;
+                border: 1px solid $main-green;
+                border-radius: 3px;
+                background-color: transparent;
+                cursor: pointer;
+                transition: all 200ms ease-in-out;
+
+                &:hover {
+                    color: white;
+                    background-color: $main-green;
+                }
+            }
+        }
+
+        .am--totalListBox {
+            margin-top: 15px;
+
+            .am--totalList {
+                position: relative;
+                padding: 15px 10px 15px 10px;
+                border-bottom: 1px solid $light-gray;
+                transition: all 100ms ease-in-out;
+
+                &:hover {
+                    background-color: #f3f3f3;
+                }
+
+                span {
+                    &:nth-of-type(1) {
+                        margin-right: 15px;
+                        color: $dark-gray;
+                    }
+
+                    &:nth-of-type(2) {
+                        font-weight: 500;
+                    }
+                }
+
+                .am--totalDelBtn {
+                    position: absolute;
+                    right: 10px;
+                    padding: 2px 4.5px;
+                    color: #ff5279;
+                    border: 1px solid #ff5279;
+                    border-radius: 50%;
+                    background-color: #f8d7da;
+                    cursor: pointer;
+                    transition: all 200ms ease-in-out;
+
+                    &:after {
+                        content: '\00d7';
+                        display: inline-block;
+                        font-size: 14px;
+                    }
+
+                    &:hover {
+                        color: white;
+                        background-color: #ff5279;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #container {
+        padding: 50px 10px 0 10px;
+
+        .am--goalForm {
+            .am--goalInp, .am--goalBtn {
+                font-size: 1rem;
+            }
+        }
+
+        .am--totalBox {
+            padding: 0 10px;
+        }
+
+        .am--totalNote {
+            margin-top: 20px;
+            padding: 0 10px;
+
+            form {
+                position: relative;
+
+                .am--nameInp {
+                    margin: 0 0 5px 0;
+                }
+
+                .am--nameInp, .am--numInp {
+                    width: 70%;
+                }
+
+                .am--addBtn {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+    }
+}

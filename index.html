@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일일 지출 목표</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div id="container">
+        <div class="am--goalWrap">
+            <form class="am--goalForm">
+                <input
+                    class="am--goalInp"
+                    type="number"
+                    placeholder="목표 금액을 입력해주세요."
+                />
+
+                <button class="am--goalBtn">완료</button>
+            </form>
+
+            <div class="am--goalBox">
+                <p class="am--goalTxt"></p>
+                <span class="am--goalInit">목표 초기화</span>
+            </div>
+        </div>
+
+        <div class="am--totalWrap">
+            <div class="am--totalBox">
+                <span>지출 금액</span>
+                <span class="am--totalNum">0 원</span>
+            </div>
+
+            <div class="am--totalNote">
+                <p class="am--totalExp">* 지출 출처와 금액을 알려주세요.</p>
+
+                <form>
+                    <input 
+                        class="am--nameInp"
+                        type="text"
+                        placeholder="출처"
+                    />
+                    <input 
+                        class="am--numInp"
+                        type="number"
+                        placeholder="금액"
+                    />
+
+                    <button class="am--addBtn">입력</button>
+                </form>
+
+                <ul class="am--totalListBox"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/GoalAmount.js"></script>
+    <script src="js/TotalAmount.js"></script>
+</body>
+</html>
