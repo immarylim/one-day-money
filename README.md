@@ -1,5 +1,5 @@
 # 일일 지출 목표
-일일 지출 금액이 설정한 목표에 근접하거나 초과하면 경고해주는 애플리케이션입니다.
+일일 지출 금액이 설정한 목표에 근접하면 경고해주는 애플리케이션입니다.
 
 ## ⚙️ 기술 스택
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white">
