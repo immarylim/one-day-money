@@ -223,19 +223,22 @@ html, body {
             padding: 0 10px;
 
             form {
-                position: relative;
-
                 .am--nameInp {
                     margin: 0 0 5px 0;
                 }
 
+                .am--numInp {
+                    margin-right: 0;
+                }
+
                 .am--nameInp, .am--numInp {
-                    width: 70%;
+                    width: 100%;
+                    box-sizing: border-box;
                 }
 
                 .am--addBtn {
-                    position: absolute;
-                    right: 0;
+                    width: 100%;
+                    margin-top: 5px;
                 }
             }
         }
