@@ -1,13 +1,11 @@
+import { amGoalForm, amGoalBox, amTotalWrap } from "./GoalAmount.js";
+
 const amNameInp = document.querySelector('.am--nameInp');
 const amNumInp = document.querySelector('.am--numInp');
 const amAddBtn = document.querySelector('.am--addBtn');
 const amTotalListBox = document.querySelector('.am--totalListBox');
 const amTotalNum = document.querySelector('.am--totalNum');
 const amGoalInitBtn = document.querySelector('.am--goalInit');
-
-const amGoalFormVi = document.querySelector('.am--goalForm');
-const amGoalBoxVi = document.querySelector('.am--goalBox');
-const amTotalWrapVi = document.querySelector('.am--totalWrap');
 
 let totalArr = [];
 let totalVal = 0;
@@ -92,9 +90,12 @@ amGoalInitBtn.addEventListener('click', () => {
     amTotalNum.innerText = '0 원'
     amTotalNum.style.color = '#2dc653';
 
-    amGoalFormVi.style.display = 'block';
-    amGoalBoxVi.style.display = 'none';
-    amTotalWrapVi.style.display = 'none';
+    amGoalForm.style.display = 'block';
+    amGoalBox.style.display = 'none';
+    amTotalWrap.style.display = 'none';
+
+    totalArr = [];
+    totalVal = 0;
 });
 
 const totalArrGet = JSON.parse(localStorage.getItem('totalList'));
