@@ -144,9 +144,10 @@ html, body {
   font-weight: 500;
 }
 .am--totalWrap .am--totalNote .am--totalListBox .am--totalList .am--totalDelBtn {
+  width: 25px;
+  height: 25px;
   position: absolute;
   right: 10px;
-  padding: 2px 4.5px;
   color: #ff5279;
   border: 1px solid #ff5279;
   border-radius: 50%;
