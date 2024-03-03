@@ -6,7 +6,7 @@
 <img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=sass&logoColor=white">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=white">
 
-JavaScript의 기본 지식을 이해하고 나의 것으로 만들기 위해 바닐라 JavaScript를 사용했습니다.
+JavaScript의 기본 지식을 이해하고 나의 것으로 만들기 위해 바닐라 JS를 사용했습니다.
 
 ## 🔧 기능
 1. 목표 금액 입력
